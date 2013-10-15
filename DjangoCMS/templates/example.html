@@ -1,0 +1,14 @@
+{% load i18n cms_tags sekizai_tags menu_tags %}
+<!DOCTYPE html>
+<head>
+  <title>{{ request.current_page.get_title }}</title>
+  {% render_block "css" %}
+</head>
+
+<body>
+{% cms_toolbar %}
+    <p>{% show_menu 0 100 100 100 %}</p>
+    {% placeholder "main" %}
+{% render_block "js" %}
+</body>
+</html>
